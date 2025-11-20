@@ -31,7 +31,7 @@ These are used to calculate sentiment velocity (change in score over time) and c
 - `Created Date`
 
 ## Weighted Scoring
-The higher the priority, the higher the contribution to the sentiment. Issues with an "in progress" have a higher contribution than issues in other status.
+The higher the priority, the higher the contribution to the sentiment. Issues with an "in progress" status have a higher contribution than issues in other status.
 - `Priority`
 - `Status`
 
