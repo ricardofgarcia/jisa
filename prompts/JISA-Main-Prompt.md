@@ -35,9 +35,6 @@ The higher the priority, the higher the contribution to the sentiment. Issues wi
 - `Priority`
 - `Status`
 
-Before you start, ask me for the set of issues to analyze (as comma separated values) as well as their type. It is OK if the user only provides one issue.
-
-
 
 # Jira Information
 ## Jira Server Information
@@ -118,3 +115,6 @@ _The list of the issues analyzed to produce the overall sentiment and the inform
 - **Color-Status (calculated):** _[COLOR-STATUS-CALCULATED]_
 - **Comments:** _A summary of the comments analyzed._
 - **Sentiment:** _[ Positive | Negative | Neutral ]_
+
+# Ready to start...
+Before you start, ask me for the set of issues to analyze (as comma separated values) as well as their type. It is OK if the user only provides one issue and no type.
