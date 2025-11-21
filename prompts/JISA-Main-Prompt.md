@@ -65,13 +65,20 @@ Below is a template in mardown format that shows the expected output for the sen
 Provide your output in Mardown so that I can easily import it into Google Docs.
 
 # Sentiment Analysis for [ISSUE-KEY](JIRA_BASE_URL/browse/[ISSUE-KEY])
-**Created on** _[today's date]_ 
+**Created on** _[today's date and time]_ 
+
+## Overall Sentiment
+_Provide the overall sentiment (Positive, Neutral, Negative)_
 
 # TL;DR
 _One or two sentences summarizing the sentiment for this issue._
 
 # Executive Summary
 _One or two paragraphs summarizing the sentiment for this issue._
+
+## Overall Sentiment Justification
+_Explain why was this sentiment reached._
+
 
 ## Summary of impact
 _The impact this sentiment could have._
@@ -95,6 +102,7 @@ _The list of the issues analyzed to produce the overall sentiment and the inform
 - **Color-Status (calculated):** _[COLOR-STATUS-CALCULATED]_
 - **Comments:** _A summary of the comments analyzed_
 - **Sentiment:** _[ Positive | Negative | Neutral ]_
+- **Justification:** _Why was this sentiment reached._
 
 ## _[CHILD-ISSUE-KEY-1](JIRA_BASE_URL/browse/CHILD-ISSUE-KEY-1) [SUMMARY]_
 - **Type:** _[TYPE]_
@@ -104,6 +112,8 @@ _The list of the issues analyzed to produce the overall sentiment and the inform
 - **Color-Status (calculated):** _[COLOR-STATUS-CALCULATED]_
 - **Comments:** _A summary of the comments analyzed_
 - **Sentiment:** _[ Positive | Negative | Neutral ]_
+- **Justification:** _Why was this sentiment reached._
+
 
 **...**
 
@@ -115,6 +125,7 @@ _The list of the issues analyzed to produce the overall sentiment and the inform
 - **Color-Status (calculated):** _[COLOR-STATUS-CALCULATED]_
 - **Comments:** _A summary of the comments analyzed._
 - **Sentiment:** _[ Positive | Negative | Neutral ]_
+- **Justification:** _Why was this sentiment reached._
 
 # Ready to start...
 Before you start, ask me for the set of issues to analyze (as comma separated values) as well as their type. It is OK if the user only provides one issue and no type.
