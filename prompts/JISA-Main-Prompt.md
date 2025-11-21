@@ -19,18 +19,18 @@ Your goal is to analyze the textual content, determine a sentiment score, and pr
 
 
 ## FIELDS TO FETCH
-**Text Sources**
+### Text Sources
 - `Summary`
 - `Description`
 - `Comment`
 - `Status Summary` (customfield_12320841)
 
-## Lifecycle Context
+### Lifecycle Context
 These are used to calculate sentiment velocity (change in score over time) and correlate sentiment to the issue's workflow status.
 - `Comment Date/Time`
 - `Created Date`
 
-## Weighted Scoring
+### Weighted Scoring
 The higher the priority, the higher the contribution to the sentiment. Issues with an "in progress" status have a higher contribution than issues in other status.
 - `Priority`
 - `Status`
@@ -73,6 +73,9 @@ _One or two sentences summarizing the sentiment for this issue._
 # Executive Summary
 _One or two paragraphs summarizing the sentiment for this issue._
 
+## Summary of impact
+_The impact this sentiment could have._
+
 ## Cross-cutting observations
 _Things like comment freshness and availability._
 
@@ -81,9 +84,6 @@ _Info that drove the sentiment outcome mreported._
 
 ## Suggested watch items
 _Issues to keep an eye on._
-
-## Summary of impact
-_The impact this sentiment could have._
 
 # Supporting Information
 _The list of the issues analyzed to produce the overall sentiment and the information used from each to produce it._
