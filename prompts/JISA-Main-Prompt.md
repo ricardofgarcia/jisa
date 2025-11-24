@@ -14,8 +14,11 @@ Your goal is to analyze the textual content, determine a sentiment score, and pr
 1. For each `retrieved issue`, compute a `status summary`. From now on I will refer to it as `computed status summary`. 
     - If an issue already has a `status summary`, use it for subsequent analysis, otherwise use the `computed status summary` instead.
     - From now on, I will refer to the field selected for subsequent analysis as the `selected status summary`.
+1. For each `retrieved issue`, compute a `velocity`. From now on I will refer to it as `computed issue velocity`.
+    - If an issue doesn't have children, it's `computed issue velocity` will be set as `unknown`.
+    - If an issue does have children, its computed velocity will be calculated as the rate of child issues completed per week.
 1. Create a `status summary roll up` based on the `selected status summaries` of the issues below in its hierarchy, starting from the bottom up.
-
+1. Create a `target delivery date roll up` based on the `computed issue velocity` of its children multiplied by the number of open children.
 
 
 ## FIELDS TO FETCH
@@ -29,6 +32,7 @@ Your goal is to analyze the textual content, determine a sentiment score, and pr
 These are used to calculate sentiment velocity (change in score over time) and correlate sentiment to the issue's workflow status.
 - `Comment Date/Time`
 - `Created Date`
+- `Target end Date` (customfield_12313942)
 
 ### Weighted Scoring
 The higher the priority, the higher the contribution to the sentiment. Issues with an "in progress" status have a higher contribution than issues in other status.
@@ -103,6 +107,8 @@ _The list of the issues analyzed to produce the overall sentiment and the inform
 - **Comments:** _A summary of the comments analyzed_
 - **Sentiment:** _[ Positive | Negative | Neutral ]_
 - **Justification:** _Why was this sentiment reached._
+- **Issue Delivery Velocity (calculated):** _[COMPUTED-ISSUE-VELOCITY]_
+- **Delivery Date (calculated):** _[COMPUTED-DELIVERY-DATE]_
 
 ## _[CHILD-ISSUE-KEY-1](JIRA_BASE_URL/browse/CHILD-ISSUE-KEY-1) [SUMMARY]_
 - **Type:** _[TYPE]_
@@ -113,7 +119,8 @@ _The list of the issues analyzed to produce the overall sentiment and the inform
 - **Comments:** _A summary of the comments analyzed_
 - **Sentiment:** _[ Positive | Negative | Neutral ]_
 - **Justification:** _Why was this sentiment reached._
-
+- **Issue Delivery Velocity (calculated):** _[COMPLUTED-ISSUE-VELOCITY]_
+- **Delivery Date (calculated):** _[COMPUTED-DELIVERY-DATE]_
 
 **...**
 
@@ -126,6 +133,9 @@ _The list of the issues analyzed to produce the overall sentiment and the inform
 - **Comments:** _A summary of the comments analyzed._
 - **Sentiment:** _[ Positive | Negative | Neutral ]_
 - **Justification:** _Why was this sentiment reached._
+- **Target End Date:** _[TARGET-END-DATE]_
+- **Issue Delivery Velocity (calculated):** _[COMPLUTED-ISSUE-VELOCITY]_
+- **Delivery Date (calculated):** _[COMPUTED-DELIVERY-DATE]_
 
 # Ready to start...
 Before you start, ask me for the set of issues to analyze (as comma separated values) as well as their type. It is OK if the user only provides one issue and no type.
